@@ -37,6 +37,17 @@ export async function loader() {
 
 export default function CurrentConditions() {
   const { currentConditions } = useLoaderData<typeof loader>()
+
+  if (!currentConditions || !currentConditions.weather) {
+  return (
+    <main style={{ padding: '1.5rem', fontFamily: 'system-ui, sans-serif' }}>
+      <h1>Weather App</h1>
+      <p>Weather data is not available.</p>
+      <pre>{JSON.stringify(currentConditions, null, 2)}</pre>
+    </main>
+  )
+}
+
   const weather = currentConditions.weather[0]
   return (
     <>
