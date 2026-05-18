@@ -19,8 +19,7 @@ The application is containerized using Docker and deployed locally with Kubernet
 
 ---
 ## Demo k8s folder
-
-
+https://github.com/Jingjing-Duan/cst8918-w25-a01-weather/tree/main/k8s
 
 
 ## Local Development
